@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;400;500;600&display=swap');
+/* Set core root defaults */
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #0074d5 #000;
+  transition: all 0.5s ease-in;
+}
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
+html.dark {
+  background-color: #000;
+  color: var(--primary-color);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Encode Sans', sans-serif;
+  overflow: auto;
+  animation: fadeInAnimation ease-out 3s 1 forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #6acae4;
+}
+
+/* .toggle {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 3rem;
+  padding: 1rem 1.2rem;
+  position: absolute;
+  top: 3rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.toggle:focus {
+  outline: none;
+} */
+.themer {
+  margin: 2rem auto;
+
+  margin-top: -4rem;
+}
+label {
+  position: relative;
+  display: block;
+  width: 135px;
+  height: 50px;
+  border-radius: 3rem;
+  background-color: slateGray;
+  box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+}
+label:before,
+label:after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 5px;
+  left: 8px;
+  transition: 0.5s ease;
+}
+label:before {
+  background-color: #ffa41b;
+  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+label:after {
+  background-color: slateGray;
+  left: -45px;
+  transform: scale(0.9);
+}
+input[type='checkbox'] {
+  display: none;
+}
+input[type='checkbox']:checked + label:before {
+  background-color: #fff;
+  transform: translateX(80px);
+}
+input[type='checkbox']:checked + label:after {
+  transform: translateX(120px) scale(1);
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.clock {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: solid 2px rgb(255, 187, 36);
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.hours {
+  background-color: var(--primary-color);
+}
+#hours-hand {
+  position: absolute;
+  height: 80px;
+  width: 4px;
+  left: 148px;
+  bottom: 148px;
+  border-radius: 16px;
+  transition: all 0.5s ease-out;
+  transform-origin: bottom;
+}
+.minutes {
+  background-color: var(--primary-color);
+}
+#minutes-hand {
+  position: absolute;
+  height: 130px;
+  width: 2px;
+  right: 149px;
+  bottom: 149px;
+  border-radius: 3px;
+  transform-origin: bottom;
+  transition: all 0.5s ease-out;
+}
+#seconds-hand {
+  position: absolute;
+  height: 140px;
+  width: 2px;
+  background-color: #ff6600;
+  left: 149px;
+  bottom: 149px;
+  height: 100px;
+  transform-origin: bottom;
+  transition: all 0.5s ease-out;
+}
+#center {
+  background-color: #ff6600;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+#center::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.digital-clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.time {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  letter-spacing: 6px;
+}
+
+.date {
+  color: #999;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+}
+
+.date .circle {
+  background-color: var(--primary-color);
+  color: #ff6600;
+  border-radius: 50%;
+  font-weight: 500;
+  height: 2.6rem;
+  width: 2.6rem;
+  padding: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  font-size: 2rem;
+  margin: 0 0.4rem;
+  transition: all 0.5s ease-out;
+}
