@@ -11,10 +11,10 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #0074d5 #000;
-  --gradDark: #c7ffdd;
-  --gradLight: #fbd988;
+  --gradLight: #c7ffdd;
+  --gradDark: #fbd988;
   background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
-  transition: all 0.5s ease-in;
+  transition: all 0.5s ease-out;
 }
 html.dark {
   --primary-color: #fff;

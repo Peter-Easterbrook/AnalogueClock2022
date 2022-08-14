@@ -2,11 +2,11 @@ const HOURHAND = document.querySelector('#hour');
 const MINUTEHAND = document.querySelector('#minute');
 const SECONDHAND = document.querySelector('#second');
 
-var date = new Date();
+var now = new Date();
 console.log(date);
-let hr = date.getHours();
-let min = date.getMinutes();
-let sec = date.getSeconds();
+let hr = now.getHours();
+let min = now.getMinutes();
+let sec = now.getSeconds();
 console.log('Hour: ' + hr + ' Minute: ' + min + ' Second: ' + sec);
 
 let hrPosition = (hr * 360) / 12 + (min * (360 / 60)) / 12;

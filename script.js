@@ -35,7 +35,7 @@ toggle.addEventListener('click', (e) => {
     html.classList.add('dark');
   }
 });
-function getTime() {
+function setTime() {
   const now = new Date();
   const seconds = now.getSeconds();
   const mins = now.getMinutes();
@@ -58,4 +58,4 @@ function getTime() {
   } ${ampm}`;
   dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span> ${year}`;
 }
-setInterval(getTime, 1000);
+setInterval(setTime, 100);
