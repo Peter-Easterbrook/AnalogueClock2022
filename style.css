@@ -76,7 +76,7 @@ html::-webkit-scrollbar {
   width: 135px;
   height: 50px;
   border-radius: 3rem;
-  background-color: slateGray;
+  background-color: #2d5567;
   border: 1px solid #ccc;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -99,7 +99,7 @@ html::-webkit-scrollbar {
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
 }
 .toggleLabel:after {
-  background-color: #6e7e8f;
+  background-color: #2d5567;
   left: -45px;
   /* transform: scale(0.6); */
 }
@@ -256,7 +256,7 @@ html::-webkit-scrollbar {
   border-radius: 3rem;
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  background-color: slateGray;
+  background-color: #2d5567;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease-out;
 }
