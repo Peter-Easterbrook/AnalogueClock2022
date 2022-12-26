@@ -30,15 +30,19 @@
 
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="clock.js" defer></script>
+    <script src="weather.js" defer></script>
 
     <title>JavaScript Clock 2022</title>
   </head>
   <body>
     <div class="themer">
       <input type="checkbox" id="toggle" class="toggle" />
-      <label for="toggle"></label>
+      <label for="toggle" class="toggleLabel"></label>
     </div>
-
+    <div class="digital-clock">
+      <!-- <div class="time"></div> -->
+      <div class="date"></div>
+    </div>
     <div class="clock-container">
       <div class="clock">
         <div id="seconds-hand"></div>
@@ -46,10 +50,22 @@
         <div id="hours-hand" class="hours"></div>
         <div id="center" class="center"></div>
       </div>
-
-      <div class="digital-clock">
-        <div class="time"></div>
-        <div class="date"></div>
+      <div id="weather" class="weather-app neon-text gsap">
+        <input
+          type="text"
+          autocomplete="off"
+          class="search-box"
+          placeholder="Weather..."
+          spellcheck="false"
+        />
+        <div class="location">
+          <div class="city"></div>
+        </div>
+        <div class="current">
+          <div class="temp"></div>
+          <div class="weather"></div>
+          <div class="wind"></div>
+        </div>
       </div>
     </div>
   </body>

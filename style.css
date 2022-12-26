@@ -44,18 +44,18 @@ body {
     opacity: 1;
   }
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: #000;
 }
-body::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background: #000;
   border-radius: 10px;
 }
-body::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-thumb:hover {
   background: #6acae4;
 }
 
@@ -78,22 +78,22 @@ body::-webkit-scrollbar-thumb:hover {
   outline: none;
 } */
 .themer {
-  margin: 2rem auto;
-  margin-top: -4rem;
+  margin: 0 auto;
 }
-label {
+.toggleLabel {
   position: relative;
   display: block;
   width: 135px;
   height: 50px;
   border-radius: 3rem;
   background-color: slateGray;
+  border: 1px solid #ccc;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   cursor: pointer;
 }
-label:before,
-label:after {
+.toggleLabel:before,
+.toggleLabel:after {
   display: block;
   position: absolute;
   content: '';
@@ -104,23 +104,23 @@ label:after {
   left: 8px;
   transition: 0.5s ease;
 }
-label:before {
+.toggleLabel:before {
   background-color: #ffa41b;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
 }
-label:after {
+.toggleLabel:after {
   background-color: #6e7e8f;
   left: -45px;
   transform: scale(0.9);
 }
-input[type='checkbox'] {
+.toggle[type='checkbox'] {
   display: none;
 }
-input[type='checkbox']:checked + label:before {
+.toggle[type='checkbox']:checked + .toggleLabel:before {
   background-color: #fff;
   transform: translateX(80px);
 }
-input[type='checkbox']:checked + label:after {
+.toggle[type='checkbox']:checked + .toggleLabel:after {
   transform: translateX(120px) scale(1);
 }
 
@@ -136,7 +136,7 @@ input[type='checkbox']:checked + label:after {
   border-radius: 50%;
   border: solid 3px rgb(255, 187, 36);
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1.4rem;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
   box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 }
@@ -207,9 +207,8 @@ input[type='checkbox']:checked + label:after {
 .digital-clock {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 2rem auto;
 }
 
 .time {
@@ -217,16 +216,15 @@ input[type='checkbox']:checked + label:after {
   font-weight: 300;
   margin-bottom: 3rem;
   letter-spacing: 6px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .date {
-  color: #999;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-out;
 }
 
@@ -246,4 +244,82 @@ input[type='checkbox']:checked + label:after {
   margin: 0.4rem 0;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
   transition: all 0.3s ease-out;
+}
+
+.weather-app {
+  position: relative;
+  width: 100%;
+  /* max-width: 22rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.search-box {
+  width: 16rem;
+  padding: 10px 15px;
+  color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  background-color: slateGray;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease-out;
+}
+.search-box::placeholder {
+  opacity: 0.5;
+  color: #fff;
+}
+.location,
+.current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-out;
+}
+
+/* .location > .date {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: calc(1em + 0.7rem);
+} */
+.location > .city {
+  font-size: clamp(2rem, 2.6vw, 2.4rem);
+}
+
+/* .location div {
+  padding: 0.6rem auto;
+}
+
+.current div {
+  padding: 0.6rem auto;
+} */
+
+.current .temp {
+  font-size: clamp(2.8rem, 2.6vw, 3.2rem);
+  padding-bottom: 1rem;
+}
+
+.current .weather,
+.current .wind {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: calc(1em + 0.8rem);
+}
+
+@media screen and (max-width: 600px) {
+  .weather-app {
+    width: 100%;
+    height: 100%;
+  }
 }

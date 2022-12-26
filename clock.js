@@ -71,5 +71,5 @@ const month = now.getMonth();
 const ampm = hours >= 12 ? 'PM' : 'AM';
 const year = now.getFullYear();
 
-timeEl.innerHTML = `${hoursForClock}:${mins < 10 ? `0${mins}` : mins} ${ampm}`;
+// timeEl.innerHTML = `${hoursForClock}:${mins < 10 ? `0${mins}` : mins} ${ampm}`;
 dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span> ${year}`;
