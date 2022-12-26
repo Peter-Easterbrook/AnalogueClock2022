@@ -121,8 +121,8 @@ html::-webkit-scrollbar {
   align-items: center;
 }
 .clock {
-  height: 300px;
-  width: 300px;
+  height: 19rem;
+  width: 19rem;
   border-radius: 50%;
   border: solid 3px rgb(255, 187, 36);
   position: relative;
@@ -138,8 +138,8 @@ html::-webkit-scrollbar {
   position: absolute;
   height: 80px;
   width: 4px;
-  right: 146px;
-  bottom: 146px;
+  right: 145px;
+  bottom: 147px;
   border-radius: 16px;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
   transition: all 0.3s ease-out;
@@ -166,7 +166,6 @@ html::-webkit-scrollbar {
   background-color: #ff6600;
   right: 147px;
   bottom: 147px;
-  height: 100px;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
   transform-origin: bottom;
   transition: all 0.3s ease-out;
@@ -223,9 +222,9 @@ html::-webkit-scrollbar {
   color: #ff6600;
   border-radius: 50%;
   font-weight: 500;
-  height: clamp(2rem, 2.6vw, 2.6rem);
-  width: clamp(2rem, 2.6vw, 2.6rem);
-  padding: clamp(1.2rem, 1.6vw, 1.6rem);
+  height: clamp(2rem, 3vw, 3rem);
+  width: clamp(2rem, 3vw, 3rem);
+  padding: clamp(1.2rem, 2vw, 2rem);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +247,7 @@ html::-webkit-scrollbar {
 }
 
 .search-box {
-  width: 16rem;
+  width: clamp(12rem, 16vw, 16rem);
   padding: 10px 15px;
   color: #fff;
   border: 1px solid #ccc;
@@ -337,6 +336,28 @@ html::-webkit-scrollbar {
   }
   .date .circle {
     margin: 0.2rem 0;
+  }
+  .clock {
+    height: 15rem;
+    width: 15rem;
+  }
+  #hours-hand {
+    position: absolute;
+    height: 64px;
+    right: 116px;
+    bottom: 118px;
+  }
+  #minutes-hand {
+    position: absolute;
+    height: 104px;
+    right: 116px;
+    bottom: 118px;
+  }
+  #seconds-hand {
+    position: absolute;
+    height: 90px;
+    right: 118px;
+    bottom: 118px;
   }
   .search-box {
     padding: 7px 11px;
