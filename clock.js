@@ -1,9 +1,9 @@
-const HOURHAND = document.querySelector('#hour');
-const MINUTEHAND = document.querySelector('#minute');
-const SECONDHAND = document.querySelector('#second');
+const HOURHAND = document.querySelector('#hours-hand');
+const MINUTEHAND = document.querySelector('#minutes-hand');
+const SECONDHAND = document.querySelector('#seconds-hand');
 
 var now = new Date();
-console.log(date);
+console.log(now);
 let hr = now.getHours();
 let min = now.getMinutes();
 let sec = now.getSeconds();
@@ -24,3 +24,52 @@ function runTheClock() {
 }
 
 var interval = setInterval(runTheClock, 1000);
+
+const toggle = document.getElementById('toggle');
+toggle.addEventListener('click', (e) => {
+  const html = document.querySelector('html');
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+  } else {
+    html.classList.add('dark');
+  }
+});
+
+const timeEl = document.querySelector('.time');
+const dateEl = document.querySelector('.date');
+
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+const seconds = now.getSeconds();
+const mins = now.getMinutes();
+const hours = now.getHours();
+const hoursForClock = hours >= 13 ? hours % 12 : hours;
+const date = now.getDate();
+const day = now.getDay();
+const month = now.getMonth();
+const ampm = hours >= 12 ? 'PM' : 'AM';
+const year = now.getFullYear();
+
+timeEl.innerHTML = `${hoursForClock}:${mins < 10 ? `0${mins}` : mins} ${ampm}`;
+dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span> ${year}`;
