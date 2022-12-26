@@ -311,6 +311,7 @@ html::-webkit-scrollbar {
     margin-top: 1rem;
   }
   .toggleLabel {
+    width: 108px;
     height: 40px;
   }
   .toggleLabel:before,
@@ -319,6 +320,17 @@ html::-webkit-scrollbar {
     height: 32px;
     /* top: 5px;
     left: 8px; */
+  }
+  .toggleLabel:after {
+    left: -36px;
+    /* transform: scale(0.6); */
+  }
+
+  .toggle[type='checkbox']:checked + .toggleLabel:before {
+    transform: translateX(64px);
+  }
+  .toggle[type='checkbox']:checked + .toggleLabel:after {
+    transform: translateX(96px) scale(1);
   }
   .digital-clock {
     margin: 1rem auto;
