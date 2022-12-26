@@ -90,8 +90,8 @@ html::-webkit-scrollbar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  top: 5px;
-  left: 8px;
+  top: 4px;
+  left: 6px;
   transition: 0.5s ease;
 }
 .toggleLabel:before {
@@ -101,7 +101,7 @@ html::-webkit-scrollbar {
 .toggleLabel:after {
   background-color: #6e7e8f;
   left: -45px;
-  transform: scale(0.9);
+  /* transform: scale(0.6); */
 }
 .toggle[type='checkbox'] {
   display: none;
@@ -310,8 +310,21 @@ html::-webkit-scrollbar {
   .themer {
     margin-top: 1rem;
   }
+  .toggleLabel {
+    height: 40px;
+  }
+  .toggleLabel:before,
+  .toggleLabel:after {
+    width: 32px;
+    height: 32px;
+    /* top: 5px;
+    left: 8px; */
+  }
   .digital-clock {
     margin: 1rem auto;
+  }
+  .search-box {
+    padding: 7px 11px;
   }
   .weather-app {
     width: 100%;
