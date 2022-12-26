@@ -152,7 +152,7 @@ input[type='checkbox']:checked + label:after {
   bottom: 146px;
   border-radius: 16px;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   transform-origin: bottom;
 }
 .minutes {
@@ -167,7 +167,7 @@ input[type='checkbox']:checked + label:after {
   border-radius: 3px;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
   transform-origin: bottom;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 #seconds-hand {
   position: absolute;
@@ -179,7 +179,7 @@ input[type='checkbox']:checked + label:after {
   height: 100px;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
   transform-origin: bottom;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 #center {
   background-color: #ff6600;
@@ -202,7 +202,7 @@ input[type='checkbox']:checked + label:after {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 .digital-clock {
   display: flex;
@@ -227,7 +227,7 @@ input[type='checkbox']:checked + label:after {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .date .circle {
