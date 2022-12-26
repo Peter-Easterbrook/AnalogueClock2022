@@ -150,7 +150,7 @@ html::-webkit-scrollbar {
 }
 #minutes-hand {
   position: absolute;
-  height: 130px;
+  height: 135px;
   width: 2px;
   right: 147px;
   bottom: 147px;
@@ -161,7 +161,7 @@ html::-webkit-scrollbar {
 }
 #seconds-hand {
   position: absolute;
-  height: 140px;
+  height: 135px;
   width: 2px;
   background-color: #ff6600;
   right: 147px;
