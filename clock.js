@@ -2,7 +2,7 @@ const HOURHAND = document.querySelector('#hours-hand');
 const MINUTEHAND = document.querySelector('#minutes-hand');
 const SECONDHAND = document.querySelector('#seconds-hand');
 
-var now = new Date();
+const now = new Date();
 console.log(now);
 let hr = now.getHours();
 let min = now.getMinutes();
@@ -23,7 +23,7 @@ function runTheClock() {
   SECONDHAND.style.transform = 'rotate(' + secPosition + 'deg)';
 }
 
-var interval = setInterval(runTheClock, 1000);
+setInterval(runTheClock, 1000);
 
 const toggle = document.getElementById('toggle');
 toggle.addEventListener('click', (e) => {
@@ -35,7 +35,7 @@ toggle.addEventListener('click', (e) => {
   }
 });
 
-const timeEl = document.querySelector('.time');
+// const timeEl = document.querySelector('.time');
 const dateEl = document.querySelector('.date');
 
 const days = [
@@ -61,10 +61,10 @@ const months = [
   'Nov',
   'Dec',
 ];
-const seconds = now.getSeconds();
-const mins = now.getMinutes();
+// const seconds = now.getSeconds();
+// const mins = now.getMinutes();
 const hours = now.getHours();
-const hoursForClock = hours >= 13 ? hours % 12 : hours;
+// const hoursForClock = hours >= 13 ? hours % 12 : hours;
 const date = now.getDate();
 const day = now.getDay();
 const month = now.getMonth();

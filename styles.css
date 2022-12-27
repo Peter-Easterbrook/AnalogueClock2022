@@ -49,32 +49,20 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-/* .toggle {
-  cursor: pointer;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: 0;
-  border-radius: 3rem;
-  padding: 1rem 1.2rem;
-  position: absolute;
-  top: 3rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 200;
-  letter-spacing: 2px;
-}
+/* MobileFirst ************ */
 
 .toggle:focus {
   outline: none;
-} */
-.themer {
-  margin: 0 auto;
 }
+.themer {
+  margin: 2rem auto;
+}
+
 .toggleLabel {
   position: relative;
   display: block;
-  width: 135px;
-  height: 50px;
+  width: 108px;
+  height: 40px;
   border-radius: 3rem;
   background-color: #2d5567;
   border: 1px solid #ccc;
@@ -87,8 +75,8 @@ html::-webkit-scrollbar {
   display: block;
   position: absolute;
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   top: 4px;
   left: 6px;
@@ -100,7 +88,8 @@ html::-webkit-scrollbar {
 }
 .toggleLabel:after {
   background-color: #2d5567;
-  left: -45px;
+  left: -36px;
+
   /* transform: scale(0.6); */
 }
 .toggle[type='checkbox'] {
@@ -108,96 +97,16 @@ html::-webkit-scrollbar {
 }
 .toggle[type='checkbox']:checked + .toggleLabel:before {
   background-color: #fff;
-  transform: translateX(80px);
+  transform: translateX(64px);
 }
 .toggle[type='checkbox']:checked + .toggleLabel:after {
-  transform: translateX(120px) scale(1);
-}
-
-.clock-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.clock {
-  height: 19rem;
-  width: 19rem;
-  border-radius: 50%;
-  border: solid 3px rgb(255, 187, 36);
-  position: relative;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
-  box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
-}
-
-.hours {
-  background-color: var(--primary-color);
-}
-#hours-hand {
-  position: absolute;
-  height: 80px;
-  width: 4px;
-  right: 145px;
-  bottom: 147px;
-  border-radius: 16px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
-  transition: all 0.3s ease-out;
-  transform-origin: bottom;
-}
-.minutes {
-  background-color: var(--primary-color);
-}
-#minutes-hand {
-  position: absolute;
-  height: 135px;
-  width: 2px;
-  right: 147px;
-  bottom: 147px;
-  border-radius: 3px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
-  transform-origin: bottom;
-  transition: all 0.3s ease-out;
-}
-#seconds-hand {
-  position: absolute;
-  height: 135px;
-  width: 2px;
-  background-color: #ff6600;
-  right: 147px;
-  bottom: 147px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
-  transform-origin: bottom;
-  transition: all 0.3s ease-out;
-}
-#center {
-  background-color: #ff6600;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-#center::after {
-  content: '';
-  background-color: var(--primary-color);
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  transition: all 0.3s ease-out;
+  transform: translateX(96px) scale(1);
 }
 .digital-clock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem auto;
+  margin: 1rem auto 2rem;
 }
 
 /* .time {
@@ -228,10 +137,90 @@ html::-webkit-scrollbar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* line-height: 18px; */
   font-size: clamp(1.3rem, 2.4vw, 2.4rem);
-  margin: 0.4rem 0;
+  margin: 0.2rem 0;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease-out;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.clock {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: solid 3px rgb(255, 187, 36);
+  position: relative;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.hours {
+  background-color: var(--primary-color);
+}
+#hours-hand {
+  position: absolute;
+  height: 64px;
+  right: 116px;
+  bottom: 118px;
+  width: 4px;
+  border-radius: 16px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease-out;
+  transform-origin: bottom;
+}
+.minutes {
+  background-color: var(--primary-color);
+}
+#minutes-hand {
+  position: absolute;
+  height: 105px;
+  right: 116px;
+  bottom: 118px;
+  width: 2px;
+  border-radius: 3px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+}
+#seconds-hand {
+  position: absolute;
+  height: 105px;
+  right: 118px;
+  bottom: 118px;
+  width: 2px;
+  background-color: #ff6600;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+}
+#center {
+  background-color: #ff6600;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+#center::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   transition: all 0.3s ease-out;
 }
 
@@ -248,7 +237,7 @@ html::-webkit-scrollbar {
 
 .search-box {
   width: clamp(12rem, 16vw, 16rem);
-  padding: 10px 15px;
+  padding: 7px 11px;
   color: #fff;
   border: 1px solid #ccc;
   outline: none;
@@ -305,41 +294,40 @@ html::-webkit-scrollbar {
   line-height: calc(1em + 0.8rem);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .themer {
-    margin-top: 1rem;
+    margin: 0 auto;
   }
   .toggleLabel {
-    width: 108px;
-    height: 40px;
+    width: 135px;
+    height: 50px;
   }
   .toggleLabel:before,
   .toggleLabel:after {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     /* top: 5px;
     left: 8px; */
   }
   .toggleLabel:after {
-    left: -36px;
+    left: -45px;
     /* transform: scale(0.6); */
   }
-
   .toggle[type='checkbox']:checked + .toggleLabel:before {
-    transform: translateX(64px);
+    transform: translateX(80px);
   }
   .toggle[type='checkbox']:checked + .toggleLabel:after {
-    transform: translateX(96px) scale(1);
+    transform: translateX(120px) scale(1);
   }
   .digital-clock {
-    margin: 1rem auto;
+    margin: 2rem auto;
   }
   .date .circle {
-    margin: 0.2rem 0;
+    margin: 0.4rem 0;
   }
   .clock {
-    height: 15rem;
-    width: 15rem;
+    height: 19rem;
+    width: 19rem;
   }
   #hours-hand {
     position: absolute;
@@ -349,17 +337,17 @@ html::-webkit-scrollbar {
   }
   #minutes-hand {
     position: absolute;
-    height: 105px;
-    right: 116px;
-    bottom: 118px;
+    height: 135px;
+    right: 147px;
+    bottom: 147px;
   }
   #seconds-hand {
     position: absolute;
-    height: 105px;
-    right: 118px;
-    bottom: 118px;
+    height: 135px;
+    right: 147px;
+    bottom: 147px;
   }
   .search-box {
-    padding: 7px 11px;
+    padding: 10px 15px;
   }
 }
