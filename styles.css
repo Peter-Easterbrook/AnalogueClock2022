@@ -10,7 +10,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #6e7e8f #000;
+  scrollbar-color: #2d5567 #000;
   --gradLight: #c7ffdd;
   --gradDark: #ffd26a;
   background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
@@ -55,7 +55,7 @@ html::-webkit-scrollbar {
   outline: none;
 }
 .themer {
-  margin: 2rem auto;
+  margin: 2rem auto 1rem;
 }
 
 .toggleLabel {
@@ -106,7 +106,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem auto 2rem;
+  margin: 1rem auto 1.4rem;
 }
 
 /* .time {
