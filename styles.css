@@ -115,7 +115,6 @@ input:checked + .slider:before {
   transform: translateX(55px);
   background: #000 url('favicon/Moon.png') no-repeat center;
   background-size: contain;
-  background-size: contain;
   filter: var(--drop-shadow);
 }
 
