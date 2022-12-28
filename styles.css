@@ -344,13 +344,13 @@ input:checked + .slider:before {
   #minutes-hand {
     position: absolute;
     height: 135px;
-    right: 147px;
+    right: 149px;
     bottom: 147px;
   }
   #seconds-hand {
     position: absolute;
     height: 135px;
-    right: 147px;
+    right: 149px;
     bottom: 149px;
   }
   .search-box {
