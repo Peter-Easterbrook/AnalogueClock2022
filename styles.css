@@ -98,9 +98,7 @@ html::-webkit-scrollbar {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  background: #fffff9 url('favicon/sun1.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #fffff9 url('favicon/sun1.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
   -webkit-transition: all 0.4s ease-out;
@@ -115,9 +113,8 @@ input:checked + .slider:before {
   -webkit-transform: translateX(55px);
   -ms-transform: translateX(55px);
   transform: translateX(55px);
-  background: #000 url('favicon/Moon.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #000 url('favicon/Moon.png') no-repeat center;
+  background-size: contain;
   background-size: contain;
   filter: var(--drop-shadow);
 }
@@ -157,7 +154,7 @@ input:checked + .slider:before {
 
 .date .circle {
   background-color: var(--primary-color);
-  color: #ff7300;
+  color: #ff6600;
   border-radius: 50%;
   font-weight: 500;
   height: clamp(2rem, 3vw, 3rem);
@@ -183,7 +180,7 @@ input:checked + .slider:before {
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
-  border: solid 3px rgb(255, 187, 36);
+  border: solid 3px #f6a800;
   position: relative;
   margin-bottom: 1rem;
   filter: var(--drop-shadow);
@@ -354,7 +351,7 @@ input:checked + .slider:before {
     position: absolute;
     height: 135px;
     right: 147px;
-    bottom: 147px;
+    bottom: 149px;
   }
   .search-box {
     padding: 10px 15px;
