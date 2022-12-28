@@ -332,8 +332,8 @@ html::-webkit-scrollbar {
   #hours-hand {
     position: absolute;
     height: 64px;
-    right: 116px;
-    bottom: 118px;
+    right: 147px;
+    bottom: 147px;
   }
   #minutes-hand {
     position: absolute;
