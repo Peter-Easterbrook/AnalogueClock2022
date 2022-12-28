@@ -224,6 +224,7 @@ input:checked + .slider:before {
   background-color: #ff6600;
   filter: var(--drop-shadow);
   transform-origin: bottom;
+  z-index: 1;
   transition: all 0.3s ease-out;
 }
 #center {
@@ -345,7 +346,7 @@ input:checked + .slider:before {
     position: absolute;
     height: 135px;
     right: 149px;
-    bottom: 147px;
+    bottom: 149px;
   }
   #seconds-hand {
     position: absolute;
