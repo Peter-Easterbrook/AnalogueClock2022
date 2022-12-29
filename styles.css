@@ -33,7 +33,7 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-family: 'Encode Sans', sans-serif;
   overflow: auto;
   user-select: none;
@@ -56,9 +56,9 @@ html::-webkit-scrollbar {
 /* .toggle:focus {
   outline: none;
 } */
-.themer {
+/* .themer {
   margin: 2rem auto 1rem;
-}
+} */
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -132,7 +132,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem auto 1.4rem;
+  /* margin: 1rem auto 1.4rem; */
 }
 
 /* .time {
@@ -172,8 +172,9 @@ input:checked + .slider:before {
 .clock-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin: -2rem auto;
 }
 
 .clock {
@@ -182,7 +183,7 @@ input:checked + .slider:before {
   border-radius: 50%;
   border: solid 3px #f6a800;
   position: relative;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   filter: var(--drop-shadow);
   box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 }
