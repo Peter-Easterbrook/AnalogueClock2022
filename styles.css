@@ -3,7 +3,12 @@
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
+  --grad-light: #cfebf9;
+  --grad-dark: #ffba24;
+  --input-toggle: #fabf38;
+  --input-location: #dfdaae;
   --drop-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  --transition: all 0.3s ease-out;
 }
 * {
   box-sizing: border-box;
@@ -12,16 +17,16 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #2d5567 #000;
-  --gradLight: #cfebf9;
-  --gradDark: #ffba24;
-  background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+  background: linear-gradient(to bottom, var(--grad-dark), var(--grad-light));
   transition: all 0.5s ease-out;
 }
 html.dark {
   --primary-color: #fff;
   --secondary-color: #000;
-  --gradDark: #102128;
-  --gradLight: #2d5567;
+  --grad-dark: #102128;
+  --grad-light: #2d5567;
+  --input-toggle: #1e3b47;
+  --input-location: #294d5d;
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
@@ -83,11 +88,11 @@ html::-webkit-scrollbar {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2d5567;
+  background-color: var(--input-toggle);
   border: 1px solid #ccc;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .slider:before {
@@ -103,12 +108,12 @@ html::-webkit-scrollbar {
   background: #fffff9 url('favicon/sun1.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
 input:checked + .slider {
-  background-color: #2d5567;
+  background-color: var(--input-toggle);
 }
 
 input:checked + .slider:before {
@@ -145,12 +150,12 @@ input:checked + .slider:before {
 } */
 
 .date {
-  font-size: clamp(1.3rem, 2.4vw, 2.4rem);
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .date .circle {
@@ -164,10 +169,10 @@ input:checked + .slider:before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1.3rem, 2.4vw, 2.4rem);
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
   margin: 0.2rem 0;
   filter: var(--drop-shadow);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .clock-container {
@@ -175,7 +180,7 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -2rem auto;
+  margin: -3rem auto;
 }
 
 .clock {
@@ -184,7 +189,6 @@ input:checked + .slider:before {
   border-radius: 50%;
   border: solid 3px #f6a800;
   position: relative;
-  /* margin-bottom: 1rem; */
   filter: var(--drop-shadow);
   box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 }
@@ -200,7 +204,7 @@ input:checked + .slider:before {
   width: 4px;
   border-radius: 16px;
   filter: var(--drop-shadow);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
   transform-origin: bottom;
 }
 .minutes {
@@ -215,19 +219,19 @@ input:checked + .slider:before {
   border-radius: 3px;
   filter: var(--drop-shadow);
   transform-origin: bottom;
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 #seconds-hand {
   position: absolute;
   height: 105px;
-  right: 118px;
-  bottom: 118px;
+  right: 116px;
+  bottom: 116px;
   width: 2px;
   background-color: #ff6600;
   filter: var(--drop-shadow);
   transform-origin: bottom;
   z-index: 1;
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 #center {
   background-color: #ff6600;
@@ -250,7 +254,7 @@ input:checked + .slider:before {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .weather-app {
@@ -261,25 +265,26 @@ input:checked + .slider:before {
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .search-box {
   width: clamp(12rem, 16vw, 16rem);
   padding: 7px 11px;
-  color: #fff;
+  color: var(--primary-color);
+  font-weight: 200;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 3rem;
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  background-color: #2d5567;
+  background-color: var(--input-location);
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: 0.2s ease-out;
+  transition: var(--transition);
 }
 .search-box::placeholder {
   opacity: 0.5;
-  color: #fff;
+  color: var(--primary-color);
 }
 .location,
 .current {
@@ -293,7 +298,7 @@ input:checked + .slider:before {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease-out;
+  transition: var(--transition);
 }
 
 /* .location > .date {
@@ -301,7 +306,7 @@ input:checked + .slider:before {
   line-height: calc(1em + 0.7rem);
 } */
 .location > .city {
-  font-size: clamp(1.3rem, 2.4vw, 2.4rem);
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
 }
 
 /* .location div {
@@ -313,13 +318,13 @@ input:checked + .slider:before {
 } */
 
 .current .temp {
-  font-size: clamp(2.6rem, 2.5vw, 3.2rem);
+  font-size: clamp(2.6rem, 2.5vw, 3rem);
   padding-bottom: 1rem;
 }
 
 .current .weather,
 .current .wind {
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.8rem);
   line-height: calc(1em + 0.8rem);
 }
 
