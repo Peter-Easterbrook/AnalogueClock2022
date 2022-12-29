@@ -265,7 +265,7 @@ input:checked + .slider:before {
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  /* padding: 1rem; */
+  padding: 1rem;
 }
 
 .search-box {
