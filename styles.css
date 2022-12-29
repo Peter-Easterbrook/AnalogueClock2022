@@ -285,6 +285,7 @@ input:checked + .slider:before {
 .search-box::placeholder {
   opacity: 0.5;
   color: var(--primary-color);
+  font-weight: 300;
 }
 .location,
 .current {
