@@ -39,41 +39,43 @@
     <title>Weather Clock 2022</title>
   </head>
   <body>
-    <div class="themer">
-      <label id="switch" class="switch">
-        <input type="checkbox" id="toggle" />
-        <span class="slider round"></span>
-      </label>
-    </div>
+    <main>
+      <div class="themer">
+        <label id="switch" class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
 
-    <div class="digital-clock">
-      <!-- <div class="time"></div> -->
-      <div class="date"></div>
-    </div>
-    <div class="clock-container">
-      <div class="clock">
-        <div id="seconds-hand"></div>
-        <div id="minutes-hand" class="minutes"></div>
-        <div id="hours-hand" class="hours"></div>
-        <div id="center" class="center"></div>
+      <div class="digital-clock">
+        <!-- <div class="time"></div> -->
+        <div class="date"></div>
       </div>
-    </div>
-    <div id="weather" class="weather-app neon-text">
-      <input
-        type="text"
-        autocomplete="off"
-        class="search-box"
-        placeholder="Weather..."
-        spellcheck="false"
-      />
-      <div class="location">
-        <div class="city"></div>
+      <div class="clock-container">
+        <div class="clock">
+          <div id="seconds-hand"></div>
+          <div id="minutes-hand" class="minutes"></div>
+          <div id="hours-hand" class="hours"></div>
+          <div id="center" class="center"></div>
+        </div>
       </div>
-      <div class="current">
-        <div class="temp"></div>
-        <div class="weather"></div>
-        <div class="wind"></div>
+      <div id="weather" class="weather-app neon-text">
+        <input
+          type="text"
+          autocomplete="off"
+          class="search-box"
+          placeholder="Weather..."
+          spellcheck="false"
+        />
+        <div class="location">
+          <div class="city"></div>
+        </div>
+        <div class="current">
+          <div class="temp"></div>
+          <div class="weather"></div>
+          <div class="wind"></div>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

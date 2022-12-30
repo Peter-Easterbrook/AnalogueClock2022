@@ -4,6 +4,14 @@ JavaScript time and date tinker 2022
 
 ---
 
-## Request
+## Note
 
-     If anyone knows how to make the clock hands move continuously beyond 12 hours, please let me know.
+Due to
+`@media (orientation: landscape) {
+  main {
+    display: none;
+  }
+}`
+
+This will only show on screens with portrait orientation.
+i.e. mobile phones
