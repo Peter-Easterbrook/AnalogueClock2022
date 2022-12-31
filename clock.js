@@ -37,6 +37,7 @@ function runTheClock() {
 
 setInterval(runTheClock, 1000);
 
+// Dark mode toggle
 const toggle = document.getElementById('toggle');
 toggle.addEventListener('click', (e) => {
   const html = document.querySelector('html');
@@ -47,7 +48,7 @@ toggle.addEventListener('click', (e) => {
   }
 });
 
-// const timeEl = document.querySelector('.time');
+const timeEl = document.querySelector('.time');
 const dateEl = document.querySelector('.date');
 
 const days = [
@@ -73,15 +74,15 @@ const months = [
   'Nov',
   'Dec',
 ];
-// const seconds = now.getSeconds();
-// const mins = now.getMinutes();
+const seconds = now.getSeconds();
+const mins = now.getMinutes();
 const hours = now.getHours();
-// const hoursForClock = hours >= 13 ? hours % 12 : hours;
+const hoursForClock = hours >= 13 ? hours % 12 : hours;
 const date = now.getDate();
 const day = now.getDay();
 const month = now.getMonth();
 const ampm = hours >= 12 ? 'PM' : 'AM';
 const year = now.getFullYear();
 
-// timeEl.innerHTML = `${hoursForClock}:${mins < 10 ? `0${mins}` : mins} ${ampm}`;
+timeEl.innerHTML = `${hoursForClock}:${mins < 10 ? `0${mins}` : mins} ${ampm}`;
 dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span> ${year}`;

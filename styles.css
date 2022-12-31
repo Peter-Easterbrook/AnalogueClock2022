@@ -9,6 +9,7 @@
   --input-location: #dfdaae;
   --drop-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
   --transition: all 0.3s ease-out;
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 * {
   box-sizing: border-box;
@@ -32,7 +33,7 @@ html.dark {
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
   font-family: 'Encode Sans', sans-serif;
   overflow: auto;
   user-select: none;
@@ -55,11 +56,12 @@ html::-webkit-scrollbar {
 /* .toggle:focus {
   outline: none;
 } */
-/* .themer {
-  margin: 2rem auto 1rem;
-} */
+.themer {
+  margin: 0 auto -2rem;
+}
+
 main {
-  min-height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -67,6 +69,7 @@ main {
   justify-content: space-around;
   padding-top: 1rem;
 }
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -135,47 +138,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.digital-clock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin: 1rem auto 1.4rem; */
-}
-
-/* .time {
-  font-size: 4rem;
-  font-weight: 300;
-  margin-bottom: 3rem;
-  letter-spacing: 6px;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-} */
-
-.date {
-  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-  transition: var(--transition);
-}
-
-.date .circle {
-  background-color: var(--primary-color);
-  color: #ff6600;
-  border-radius: 50%;
-  font-weight: 500;
-  height: clamp(2rem, 3vw, 3rem);
-  width: clamp(2rem, 3vw, 3rem);
-  padding: clamp(1.2rem, 2vw, 2rem);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
-  margin: 0.2rem 0;
-  filter: var(--drop-shadow);
-  transition: var(--transition);
-}
-
 .clock-container {
   display: flex;
   flex-direction: column;
@@ -185,6 +147,11 @@ input:checked + .slider:before {
 }
 
 .clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -1.5rem auto;
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
@@ -257,6 +224,43 @@ input:checked + .slider:before {
   border-radius: 50%;
   transition: var(--transition);
 }
+.digital-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: var(--text-shadow);
+}
+
+.time {
+  font-size: clamp(2rem, 2.8vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+.date {
+  font-size: clamp(1.3rem, 2vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.date .circle {
+  background-color: var(--primary-color);
+  color: #ff6600;
+  border-radius: 50%;
+  font-weight: 500;
+  height: clamp(2rem, 3vw, 3rem);
+  width: clamp(2rem, 3vw, 3rem);
+  padding: clamp(1.2rem, 2vw, 2rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
+  margin: 0.2rem 0;
+  filter: var(--drop-shadow);
+  transition: var(--transition);
+}
 
 .weather-app {
   position: relative;
@@ -266,7 +270,7 @@ input:checked + .slider:before {
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .search-box {
@@ -299,7 +303,7 @@ input:checked + .slider:before {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: var(--text-shadow);
   transition: var(--transition);
 }
 
@@ -332,32 +336,27 @@ input:checked + .slider:before {
 
 @media screen and (min-width: 38rem) {
   .digital-clock {
-    margin: 2rem auto;
+    margin: 2rem auto 1rem;
   }
   .date .circle {
     margin: 0.4rem 0;
   }
-  .clock-container {
-    margin: 1rem auto;
-  }
   .clock {
+    margin: 0 auto;
     height: 19rem;
     width: 19rem;
   }
   #hours-hand {
-    position: absolute;
     height: 64px;
     right: 147px;
     bottom: 147px;
   }
   #minutes-hand {
-    position: absolute;
     height: 135px;
     right: 149px;
     bottom: 149px;
   }
   #seconds-hand {
-    position: absolute;
     height: 135px;
     right: 149px;
     bottom: 149px;
@@ -369,10 +368,5 @@ input:checked + .slider:before {
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
-  }
-}
-@media (orientation: landscape) {
-  main {
-    display: none;
   }
 }
