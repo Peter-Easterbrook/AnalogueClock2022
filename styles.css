@@ -7,9 +7,11 @@
   --grad-dark: #ffba24;
   --input-toggle: #fabf38;
   --input-location: #dfdaae;
-  --drop-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  --border: #e8d188;
+  --drop-shadow: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
   --transition: all 0.3s ease-out;
-  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --box-shadow-inset: inset 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 * {
   box-sizing: border-box;
@@ -28,6 +30,7 @@ html.dark {
   --grad-light: #2d5567;
   --input-toggle: #1e3b47;
   --input-location: #294d5d;
+  --border: #1e3946;
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
@@ -75,7 +78,7 @@ main {
   position: relative;
   display: inline-block;
   width: 80px;
-  height: 30px;
+  height: 20px;
 }
 
 /* Hide default HTML checkbox */
@@ -94,8 +97,8 @@ main {
   right: 0;
   bottom: 0;
   background-color: var(--input-toggle);
-  border: 1px solid #ccc;
-  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  box-shadow: var(--box-shadow-inset);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
@@ -125,7 +128,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(55px);
   -ms-transform: translateX(55px);
   transform: translateX(55px);
-  background: #000 url('favicon/Moon.png') no-repeat center;
+  background: #12252d url('favicon/Moon.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
 }
@@ -158,7 +161,7 @@ input:checked + .slider:before {
   border: solid 3px #f6a800;
   position: relative;
   filter: var(--drop-shadow);
-  box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--box-shadow-inset);
 }
 
 .hours {
@@ -278,13 +281,13 @@ input:checked + .slider:before {
   padding: 7px 11px;
   color: var(--primary-color);
   font-weight: 300;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   outline: none;
   border-radius: 3rem;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   background-color: var(--input-location);
-  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow-inset);
   transition: var(--transition);
 }
 .search-box::placeholder {
