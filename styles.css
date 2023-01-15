@@ -110,7 +110,7 @@ main {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  background: #fffff9 url('favicon/sun1.png') no-repeat center;
+  background: #cfebf9 url('favicon/sun1.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
   -webkit-transition: var(--transition);
