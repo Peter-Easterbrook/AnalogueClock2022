@@ -30,7 +30,7 @@ html.dark {
   --grad-light: #2d5567;
   --input-toggle: #1e3b47;
   --input-location: #294d5d;
-  --border: #1e3946;
+  --border: #cae0e9;
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
@@ -350,7 +350,7 @@ input:checked + .slider:before {
     width: 19rem;
   }
   #hours-hand {
-    height: 64px;
+    height: 80px;
     right: 147px;
     bottom: 147px;
   }
