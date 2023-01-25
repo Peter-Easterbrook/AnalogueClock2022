@@ -99,6 +99,7 @@ main {
   background-color: var(--input-toggle);
   border: 1px solid var(--border);
   box-shadow: var(--box-shadow-inset);
+  -webkit-tap-highlight-color: transparent;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
