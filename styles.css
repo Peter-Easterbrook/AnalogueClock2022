@@ -100,7 +100,6 @@ main {
   border: 1px solid var(--border);
   box-shadow: var(--box-shadow-inset);
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
@@ -117,7 +116,6 @@ main {
   background: #cfebf9 url('favicon/sun1.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
-  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
