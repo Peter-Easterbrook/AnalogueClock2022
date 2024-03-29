@@ -17,8 +17,6 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
   scrollbar-color: #2d5567 #000;
   background: linear-gradient(to bottom, var(--grad-dark), var(--grad-light));
   transition: all 0.5s ease-out;
